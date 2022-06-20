@@ -8,11 +8,16 @@ class FlagerUi{
 
 
 
-  static ThemeData themeData({Brightness? brightness, MaterialColor? primaryColor, String? fontFamily}){
+  static ThemeData themeData({
+    Brightness? brightness,
+    MaterialColor? primaryColor,
+    String? fontFamily,
+    bool? useMaterial3
+  }){
 
     var themeColor = primaryColor ?? Colors.blue;
     ThemeData themeData = ThemeData(
-      useMaterial3: true,
+      useMaterial3: useMaterial3 ?? true,
       primaryColor: themeColor,
       brightness: brightness ?? Brightness.light,
       fontFamily: fontFamily,
