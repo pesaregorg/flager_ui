@@ -13,14 +13,14 @@ Add the package to your dependencies:
 
 ```yaml
 dependencies:
-  fluent_ui: ^0.0.1
+  flager_ui: ^0.0.1
 ```
 
 OR:
 
 ```yaml
 dependencies:
-  fluent_ui:
+  flager_ui:
     git: https://github.com/pesaregorg/flager_ui.git
 ```
 
@@ -35,6 +35,9 @@ Projects using this library should use the stable channel of Flutter
 Using the `FlagerUi.themeData` widget
 
 ```dart
+import 'package:flager_ui/flager_ui.dart';
+
+
 MaterialApp(
   title: ...,
 
