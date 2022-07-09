@@ -84,7 +84,6 @@ class FButtons{
 
     return OutlinedButtonThemeData(
         style: OutlinedButton.styleFrom(
-          minimumSize: Size(44, 16),
 
           primary: primaryColor,
           padding: EdgeInsets.symmetric(
