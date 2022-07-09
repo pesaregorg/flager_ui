@@ -6,11 +6,22 @@ import 'dart:io' show Platform;
 
 
 part 'constants.dart';
-part 'colors.dart';
-part 'buttons.dart';
+part 'theme_helper/colors.dart';
+part 'theme_helper/buttons.dart';
+part 'theme_helper/text_fields.dart';
+part 'theme_helper/dialog.dart';
+part 'theme_helper/snack_bar.dart';
 part 'widgets/elevated_tag.dart';
+part 'widgets/outlined_tag.dart';
+part 'widgets/elevated_buttons.dart';
+part 'widgets/checkbox.dart';
+part 'widgets/radio.dart';
 
-part 'text_fields.dart';
+
+
+
+
+
 
 
 class FlagerUi{
@@ -42,6 +53,8 @@ class FlagerUi{
         elevatedButtonTheme: FButtons.elevatedButtonThemeData(primaryColor: themeColor),
         outlinedButtonTheme: FButtons.outlinedButtonThemeData(primaryColor: themeColor),
         inputDecorationTheme: FTextFields.inputDecorationTheme(themeData: themeData),
+        dialogTheme: FDialogTheme.dialogTheme(),
+        snackBarTheme: FSnackBar.snackBarThemeData(themeData: themeData),
         switchTheme: themeData.switchTheme.copyWith(
           trackColor: MaterialStateColor.resolveWith((states){
             if (states.contains(MaterialState.selected)) {
@@ -73,14 +86,6 @@ class FlagerUi{
     );
 
     return themeData;
-  }
-
-
-
-
-
-  static colors(){
-
   }
 
 }
