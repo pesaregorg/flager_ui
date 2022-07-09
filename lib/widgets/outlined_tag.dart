@@ -2,7 +2,7 @@ part of flager_ui;
 
 
 
-class FElevatedTag extends StatefulWidget {
+class FOutlinedTag extends StatefulWidget {
   final MaterialColor? color;
   final String labelText;
   final Function? onPressed;
@@ -15,7 +15,7 @@ class FElevatedTag extends StatefulWidget {
   final IconData? suffixIcon;
   final Function? onPrefixTap;
   final Function? onSuffixTap;
-  const FElevatedTag({
+  const FOutlinedTag({
     this.color,
     this.onPressed,
     this.disabled,
@@ -32,16 +32,16 @@ class FElevatedTag extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  State<FElevatedTag> createState() => _FElevatedTagState();
+  State<FOutlinedTag> createState() => _FOutlinedTagState();
 }
 
-class _FElevatedTagState extends State<FElevatedTag> {
+class _FOutlinedTagState extends State<FOutlinedTag> {
 
 
   @override
   Widget build(BuildContext context) {
     Color primaryColor = Theme.of(context).primaryColor;
-    return ElevatedButton(
+    return OutlinedButton(
         style: ElevatedButton.styleFrom(
           tapTargetSize: MaterialTapTargetSize.shrinkWrap,
           padding: widget.padding ?? EdgeInsets.symmetric(
@@ -53,26 +53,18 @@ class _FElevatedTagState extends State<FElevatedTag> {
             borderRadius: BorderRadius.all(Radius.circular(8.0)),
           ),
         ).copyWith(
-          backgroundColor:  MaterialStateProperty.resolveWith<Color>(
+          side: MaterialStateProperty.resolveWith<BorderSide>(
                 (Set<MaterialState> states) {
-              if (states.contains(MaterialState.pressed)){
-                return widget.color?.shade300 ?? primaryColor.withAlpha(55);
-              }
-
-              return (widget.selected ?? false) ? widget.color?.shade400 ?? primaryColor.withAlpha(150) : widget.color?.shade200 ?? primaryColor.withAlpha(100);
-            },
-          ),
-          overlayColor: MaterialStateProperty.resolveWith<Color>(
-                (Set<MaterialState> states) {
-              if (states.contains(MaterialState.pressed)){
-                return widget.color?.shade300 ?? primaryColor.withAlpha(55);
-              }
               if (states.contains(MaterialState.disabled)){
-                return widget.color?.shade300 ?? primaryColor.withAlpha(50);
+                return BorderSide(
+                  color: widget.color?.shade200 ?? primaryColor.withAlpha(100),
+                  width: 2,
+                );
               }
-
-
-              return (widget.selected ?? false) ? widget.color?.shade400 ?? primaryColor.withAlpha(150) : widget.color?.shade200 ?? primaryColor.withAlpha(100);
+              return BorderSide(
+                color: widget.color?.shade500 ?? primaryColor,
+                width: 2,
+              ); // Defer to the widget's default.
             },
           ),
         ),
