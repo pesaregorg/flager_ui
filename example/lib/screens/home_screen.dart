@@ -1,4 +1,8 @@
 import 'package:example/screens/buttons_screen.dart';
+import 'package:example/screens/checkbox_screen.dart';
+import 'package:example/screens/modals_screen.dart';
+import 'package:example/screens/radio_button_screen.dart';
+import 'package:example/screens/snackbar_screen.dart';
 import 'package:example/screens/tags_screen.dart';
 import 'package:example/screens/text_fields_screen.dart';
 import 'package:flutter/material.dart';
@@ -19,8 +23,8 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
 
     return DefaultTabController(
-      length: 5,
-      initialIndex: 2,
+      length: 7,
+      initialIndex: 6,
       child: Scaffold(
         drawer: DrawerMenu(),
         body: NestedScrollView(
@@ -59,12 +63,20 @@ class _HomeScreenState extends State<HomeScreen> {
                       icon: Icon(Icons.tag_rounded),
                     ),
                     Tab(
-                      child: Text("Text"),
-                      icon: Icon(Icons.album_rounded),
+                      child: Text("Dialogs"),
+                      icon: Icon(Icons.messenger_rounded),
                     ),
                     Tab(
-                      child: Text("Text"),
-                      icon: Icon(Icons.folder_copy_rounded),
+                      child: Text("Checkbox"),
+                      icon: Icon(Icons.check_box_rounded),
+                    ),
+                    Tab(
+                      child: Text("RadioButton"),
+                      icon: Icon(Icons.check_circle_outline_rounded),
+                    ),
+                    Tab(
+                      child: Text("SnackBar"),
+                      icon: Icon(Icons.wallet_rounded),
                     ),
                   ],
                 ),
@@ -80,8 +92,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     const ButtonsScreen(),
                     const TextFieldsScreen(),
                     const TagsScreen(),
-                    Container(),
-                    Container(),
+                    const ModalsScreen(),
+                    const CheckboxScreen(),
+                    const RadioButtonScreen(),
+                    const SnackBarScreen(),
                   ],
                 ),
               )

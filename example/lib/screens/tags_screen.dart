@@ -16,41 +16,86 @@ class _TagsScreenState extends State<TagsScreen> {
       child: Wrap(
         spacing: 4.0,
         children: [
-          FElevatedTag(labelText: "disabled", color: Colors.purple, disabled: true,),
-          FElevatedTag(labelText: "1"),
-          FElevatedTag(labelText: "my tag", color: FColors.storm,onPressed: (){
-            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+          const FElevatedTag(labelText: "disabled", color: Colors.purple, disabled: true,),
+          const FElevatedTag(labelText: "1"),
+          FElevatedTag(labelText: "my tag", color: Colors.deepPurple,onPressed: (){
+            ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
               content: Text('Yay! A SnackBar!'),
             ));
           }),
-          FElevatedTag(labelText: "Select Tag", color: Colors.purple, selected: true,),
-          FElevatedTag(labelText: "Select Tag 2", selected: true,),
-          FElevatedTag(labelText: "Select Tag 3", color: Colors.blue, selected: false,),
-          FElevatedTag(labelText: "Select Tag 3", color: Colors.blue, selected: false,),
-          FElevatedTag(labelText: "Select Tag 3", color: Colors.blue, selected: true,),
-          FElevatedTag(labelText: "Select Tag 3", color: Colors.blue, selected: false,),
-          FElevatedTag(labelText: "Select Tag 3", color: Colors.blue, selected: false,),
-          FElevatedTag(labelText: "my tag", color: FColors.storm,),
-          FElevatedTag(labelText: "my tag", color: FColors.storm,),
-          FElevatedTag(labelText: "my tag", color: FColors.storm, selected: true,),
-          FElevatedTag(labelText: "my tag", color: FColors.storm, labelFontSize: 14),
-          FElevatedTag(labelText: "my tag", color: FColors.storm, labelFontSize: 18),
-          FElevatedTag(labelText: "my tag", color: FColors.storm, labelFontSize: 24, selected: true,),
-          FElevatedTag(labelText: "my tag",  labelFontSize: 24),
-          FElevatedTag(labelText: "my tag",  labelFontSize: 24),
-          FElevatedTag(labelText: "my tag",  labelFontSize: 24, selected: true,),
-          FElevatedTag(labelText: "my tag",  labelFontSize: 24),
-          FElevatedTag(labelText: "my tag", prefixIcon: Icons.access_time_rounded,),
+          const FElevatedTag(labelText: "Select Tag", color: Colors.purple, selected: true,),
+          const FElevatedTag(labelText: "Select Tag 2", selected: true,),
+          const FElevatedTag(labelText: "Select Tag 3", color: Colors.blue, selected: false,),
+          const FElevatedTag(labelText: "Select Tag 3", color: Colors.blue, selected: false,),
+          const FElevatedTag(labelText: "Select Tag 3", color: Colors.blue, selected: true,),
+          const FElevatedTag(labelText: "Select Tag 3", color: Colors.blue, selected: false,),
+          const FElevatedTag(labelText: "Select Tag 3", color: Colors.blue, selected: false,),
+          const FElevatedTag(labelText: "my tag", color: Colors.deepPurple,),
+          const FElevatedTag(labelText: "my tag", color: Colors.deepPurple,),
+          const FElevatedTag(labelText: "my tag", color: Colors.deepPurple, selected: true,),
+          const FElevatedTag(labelText: "my tag", color: Colors.deepPurple, labelFontSize: 14),
+          const FElevatedTag(labelText: "my tag", color: Colors.deepPurple, labelFontSize: 18),
+          const FElevatedTag(labelText: "my tag", color: Colors.deepPurple, labelFontSize: 24, selected: true,),
+          const FElevatedTag(labelText: "my tag",  labelFontSize: 24),
+          const FElevatedTag(labelText: "my tag",  labelFontSize: 24),
+          const FElevatedTag(labelText: "my tag",  labelFontSize: 24, selected: true,),
+          const FElevatedTag(labelText: "my tag",  labelFontSize: 24),
+          const FElevatedTag(labelText: "my tag", prefixIcon: Icons.access_time_rounded,),
           FElevatedTag(
               labelText: "labelText",
             prefixIcon: Icons.account_box_rounded,
             onPressed: (){
-              ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+              ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                 content: Text('Tag Clicked'),
               ));
             },
             onPrefixTap: (){
-              ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+              ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+
+                content: Text('Icon Clicked'),
+              ));
+            },
+          ),
+
+
+
+
+
+          const FOutlinedTag(labelText: "disabled", color: Colors.purple, disabled: true,),
+          const FOutlinedTag(labelText: "1"),
+          FOutlinedTag(labelText: "my tag", color: Colors.deepPurple,onPressed: (){
+            ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+              content: Text('Yay! A SnackBar!'),
+            ));
+          }),
+          const FOutlinedTag(labelText: "Select Tag", color: Colors.purple, selected: true,),
+          const FOutlinedTag(labelText: "Select Tag 2", selected: true,),
+          const FOutlinedTag(labelText: "Select Tag 3", color: Colors.blue, selected: false,),
+          const FOutlinedTag(labelText: "Select Tag 3", color: Colors.blue, selected: false,),
+          const FOutlinedTag(labelText: "Select Tag 3", color: Colors.blue, selected: true,),
+          const FOutlinedTag(labelText: "Select Tag 3", color: Colors.blue, selected: false,),
+          const FOutlinedTag(labelText: "Select Tag 3", color: Colors.blue, selected: false,),
+          const FOutlinedTag(labelText: "my tag", color: Colors.deepPurple,),
+          const FOutlinedTag(labelText: "my tag", color: Colors.deepPurple,),
+          const FOutlinedTag(labelText: "my tag", color: Colors.deepPurple, selected: true,),
+          const FOutlinedTag(labelText: "my tag", color: Colors.deepPurple, labelFontSize: 14),
+          const FOutlinedTag(labelText: "my tag", color: Colors.deepPurple, labelFontSize: 18),
+          const FOutlinedTag(labelText: "my tag", color: Colors.deepPurple, labelFontSize: 24, selected: true,),
+          const FOutlinedTag(labelText: "my tag",  labelFontSize: 24),
+          const FOutlinedTag(labelText: "my tag",  labelFontSize: 24),
+          const FOutlinedTag(labelText: "my tag",  labelFontSize: 24, selected: true,),
+          const FOutlinedTag(labelText: "my tag",  labelFontSize: 24),
+          const FOutlinedTag(labelText: "my tag", prefixIcon: Icons.access_time_rounded, disabled: true,),
+          FOutlinedTag(
+            labelText: "labelText",
+            prefixIcon: Icons.account_box_rounded,
+            onPressed: (){
+              ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                content: Text('Tag Clicked'),
+              ));
+            },
+            onPrefixTap: (){
+              ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
 
                 content: Text('Icon Clicked'),
               ));
